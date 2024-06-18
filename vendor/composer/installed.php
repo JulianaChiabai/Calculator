@@ -3,7 +3,7 @@
         'name' => 'my-php-project/my-php-project',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '38e6d1378207dc516cd97926d91391fffd692469',
+        'reference' => 'b91033c7dadf5a1f2b81197124770e3cae5e1504',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'my-php-project/my-php-project' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '38e6d1378207dc516cd97926d91391fffd692469',
+            'reference' => 'b91033c7dadf5a1f2b81197124770e3cae5e1504',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
