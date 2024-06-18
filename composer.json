@@ -1,5 +1,5 @@
 {
-    "name": "my-php-project/my-php-project",
+    "name": "my-php-project/calculator",
     "description": "A simple PHP project for CI testing",
     "autoload": {
         "psr-4": {
