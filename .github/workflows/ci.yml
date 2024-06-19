@@ -21,10 +21,14 @@ jobs:
         php-version: '8.1'
         extensions: xml
 
+    - name: Install dependencies
+      run: composer install
+
+    - name: Set permissions for PHPUnit
+      run: chmod +x vendor/bin/phpunit
+
     - name: Validate PHP syntax
       run: php -l index.php
 
     - name: Run PHPUnit tests
-      run: |
-        composer install
-        vendor/bin/phpunit tests/
+      run: vendor/bin/phpunit tests/
