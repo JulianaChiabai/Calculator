@@ -12,23 +12,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    # Haal de repository op
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    # Stel PHP in
     - name: Set up PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '8.1'
         extensions: xml
 
+    # Installeer afhankelijkheden
     - name: Install dependencies
       run: composer install
 
+    # Stel permissies in voor PHPUnit
     - name: Set permissions for PHPUnit
       run: chmod +x vendor/bin/phpunit
 
+    # Valideer PHP-syntaxis
     - name: Validate PHP syntax
       run: php -l index.php
 
+    # Voer PHPUnit-tests uit
     - name: Run PHPUnit tests
       run: vendor/bin/phpunit tests/
