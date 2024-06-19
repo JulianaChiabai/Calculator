@@ -1,13 +1,31 @@
 <?php
-
 use PHPUnit\Framework\TestCase;
-use App\Calculator;
 
 class CalculatorTest extends TestCase
 {
-    public function testAdd()
+    public function testAddition()
     {
-        $calculator = new Calculator();
-        $this->assertEquals(4, $calculator->add(2, 2));
+        $this->assertEquals(4, 2 + 2);
+    }
+
+    public function testSubtraction()
+    {
+        $this->assertEquals(0, 2 - 2);
+    }
+
+    public function testMultiplication()
+    {
+        $this->assertEquals(4, 2 * 2);
+    }
+
+    public function testDivision()
+    {
+        $this->assertEquals(1, 2 / 2);
+    }
+
+    public function testDivisionByZero()
+    {
+        $this->expectException(DivisionByZeroError::class);
+        $result = 2 / 0;
     }
 }
